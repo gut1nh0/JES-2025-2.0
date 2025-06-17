@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Alexandria:wght@100..900&family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F1F1F1;
+    color: #333;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.container-home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-home h1{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 80px;
+    color: #C62A2A;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
