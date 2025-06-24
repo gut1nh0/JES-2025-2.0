@@ -1,39 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Alexandria:wght@100..900&family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #F1F1F1;
     color: #333;
+    height: 100vh;
+    font-family: "Alexandria", sans-serif;
 }
 
-main{
+main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     width: 100%;
+    height: 100%;
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+    height: 100%;
+
 }
 
-.container-home{
+
+
+.jes-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 4rem;
 }
 
-.container-home h1{
+.jes-titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.jes-titulo h1 {
     font-family: "Archivo Black", sans-serif;
-    font-size: 80px;
+    font-size: 7rem;
     color: #C62A2A;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jes-titulo h2 {
+    font-family: "Akatab", sans-serif;
+    font-size: 2.3rem;
+    margin-top: -0.3em;
+}
+
+.jes-descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: center;
+}
+
+.jes-descricao :first-child{
+    font-size: 1.7rem;
+}
+
+
+.jes-botoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.jes-botoes button{
+    font-family: "Alexandria", sans-serif;
+    font-size: 1.2rem;
+    width: 33%;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+.jes-botoes button[data-id="1"]{
+
 }
