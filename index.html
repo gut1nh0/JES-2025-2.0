@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>JES-2025</title>
 </head>
 
@@ -24,7 +25,7 @@
                 </div>
                 <div class="jes-botoes">
                     <button data-id="1">Acompanhar Jogos</button>
-                    <button data-id="2">Entrar</button>
+                    <button data-id="2" onclick="window.location.href='./login.html'">Entrar</button>
                 </div>
             </div>
         </section>
@@ -35,22 +36,22 @@
                     juventude, do talento e da paixão pelo esporte.</p>
             </div>
             <div class="container-topicos">
-                <div class="topicos">
+                <div class="topicos" data-aos="fade-down">
                     <i class="bi bi-people-fill"></i>
                     <h3>Comunidade</h3>
                     <p>Unindo estudantes de toda a escola em uma grande família esportiva</p>
                 </div>
-                <div class="topicos">
+                <div class="topicos" data-aos="fade-down">
                     <i class="bi bi-trophy-fill"></i>
                     <h3>Excelência</h3>
                     <p>Promovendo o alto desempenho e o fair play em cada competição</p>
                 </div>
-                <div class="topicos">
+                <div class="topicos" data-aos="fade-down">
                     <i class="bi bi-heart"></i>
                     <h3>Paixão</h3>
                     <p>Alimentando o amor pelo esporte e pela vida escolar</p>
                 </div>
-                <div class="topicos">
+                <div class="topicos" data-aos="fade-down">
                     <div class="image-topico">
                         <img src="./IMG/index/target.png" alt="">
                     </div>
@@ -78,7 +79,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 
     <div class="footer-section">
       <img src="./IMG/logo-senai.png" alt="Logo SENAI">
@@ -104,5 +105,11 @@
     </div>
   </footer>
 </body>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init( {
+        duration: 1200,
+        once: true
+    });
+</script>
 </html>
