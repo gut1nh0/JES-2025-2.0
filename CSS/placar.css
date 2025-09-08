@@ -114,3 +114,65 @@ main{
     text-transform: uppercase;
     font-weight: 300;
 }
+
+.container-jogos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.jogos-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 200px;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border: 0.5px solid #cfcfcf5c;
+}
+
+.top-jogos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top-jogos p{
+    font-weight: 600;
+    color: #525252b0;
+}
+
+.top-jogos p:first-child{
+    color: #c62a2a;
+    text-transform: uppercase;
+
+}
+
+.mid-jogos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mid-jogos h3{
+    margin-top: 10%;
+    font-size: 2rem;
+}
+
+.time-jogos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+
+.bottom-jogos{
+    margin-top: 0.5rem;
+    display: flex;
+    font-size: 0.9rem;
+}
