@@ -1,29 +1,15 @@
 @import url(./importacoes.css);
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: "Alexandria", sans-serif;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    padding: 4rem;
+    padding: 3rem;
     gap: 4rem;
 }
 
-.titulo-page{
+.titulo-page {
     display: flex;
     width: 70%;
     text-transform: uppercase;
@@ -31,9 +17,10 @@ main {
     letter-spacing: 3px;
     color: #DC2626;
     font-family: "Archivo Black", sans-serif;
+    margin-right: 20px;
 }
 
-.titulo-page h1{
+.titulo-page h1 {
     border-bottom: 2px solid #DC2626;
 }
 
@@ -42,20 +29,20 @@ main {
     flex-wrap: wrap;
     gap: 40px;
     height: 90vh;
-    width: 70%;
+    width: 80%;
+    justify-content: center;
 }
 
 
 #criar-jogo {
     width: 280px;
-    height: 200px;
-    border-radius: 9px;
+    height: 220px;
+    border-radius: 15px;
     border: none;
     background-color: #DCDCDC;
     color: black;
     font-size: 70px;
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -76,44 +63,56 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 1001;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .modal {
-    background: #fdf2f2;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 380px;
     text-align: center;
-    width: 300px;
-    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+
 }
 
-.modal input {
+.modal h2 {
+    color: #e53935;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e53935;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.modal input,
+.modal select {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+    padding: 12px;
+    margin: 8px 0;
     border-radius: 10px;
-    background: lightgray;
+    border: none;
+    background: #e0e0e0;
+    font-size: 14px;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.modal button {
-    background: #585656;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.modal button:hover {
-    transform: scale(1.05);
+.modal select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 16px;
+    gap: 10px;
 }
 
 .input-group {
@@ -121,7 +120,117 @@ main {
     gap: 10px;
 }
 
+.input-group input,
+.input-group select {
+    flex: 1;
+}
+
+
+.modal button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e53935;
+    border: 2px solid #e53935;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal button:hover {
+    background: #e53935;
+    color: #fff;
+}
+
+
 .overlay.ativo {
     visibility: visible;
     opacity: 1;
+}
+
+.card-cronograma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 220px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border: 2px solid #AAAAAA;
+}
+
+.top-cronograma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.data-cronograma {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-cronograma p {
+    font-weight: 600;
+    color: #525252b0;
+    font-size: 0.8rem;
+}
+
+.data-cronograma p:first-child {
+    color: #c62a2a;
+    text-transform: uppercase;
+
+}
+
+.categoria-esporte {
+    font-weight: 600;
+    font-size: 0.5rem;
+    color: #333;
+    margin-top: -10px;
+}
+
+.jogo-cronograma {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.time-cronograma img {
+    width: 60px;
+    height: 70px;
+}
+
+.time-cronograma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cronograma-botao {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cronograma-botao button {
+    border: none;
+    height: 25px;
+    width: 40%;
+    color: white;
+    background-color: #DC2626;
+    cursor: pointer;
+    font-family: "Alexandria", sans-serif;
+    border-radius: 20px;
+    font-size: 0.9rem
 }

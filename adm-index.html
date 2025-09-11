@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/adm-index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>JES-2025</h1>
+      <span>Jogos estudantis do Sesi</span>
+    </div>
+
+    <div class="right-side">
+      <button class="admin-btn">Admin</button>
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="badge">
+        <i class="bi bi-trophy-fill"></i>
+        Sistema de Gestão Esportiva Escolar
+      </div>
+      <h1>JES-Admin</h1>
+      <p>Gerencie seus jogos escolares com simplicidade e eficiência</p>
+      <p>Plataforma completa para administração de competições esportivas educacionais</p>
+    </section>
+    <section class="dashboard-section">
+      <h2>Dashboard de Controle</h2>
+
+      <div class="dashboard">
+        <!-- Card 1 -->
+        <div class="card" id="card1">
+          <div class="card-header">
+            <i class="bi bi-trophy-fill text-danger"></i>
+            <span class="badge red">Ativo</span>
+          </div>
+          <h3>Partidas Hoje</h3>
+          <div class="value">8</div>
+          <p>Jogos programados</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" id="card2">
+          <div class="card-header">
+            <i class="bi bi-people-fill text-primary"></i>
+            <span class="badge blue">Online</span>
+          </div>
+          <h3>Equipes Ativadas</h3>
+          <div class="value">12</div>
+          <p>Times cadastrados</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" id="card3">
+          <div class="card-header">
+            <i class="bi bi-clock-fill"></i>
+            <span class="badge green">Ao vivo</span>
+          </div>
+          <h3>Jogos em Andamento</h3>
+          <div class="value">1</div>
+          <p>Jogos ao vivo</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" id="card4">
+          <div class="card-header">
+            <i class="bi bi-bar-chart-fill text-purple"></i>
+            <span class="badge purple">Relatório</span>
+          </div>
+          <h3>Total de Jogos</h3>
+          <div class="value">48</div>
+          <p>Temporada 2025</p>
+        </div>
+      </div>
+    </section>
+    <section class="sistema-section">
+      <h2>Como Funciona o Sistema</h2>
+      <p class="subtitle">Guia completo para administradores</p>
+
+      <div class="cards">
+        <!-- Card 1 -->
+        <div class="card red">
+          <div class="card-header">
+            <i class="bi bi-calendar-event-fill"></i>
+            <h3>Como Criar um Partida</h3>
+          </div>
+          <ul class="steps">
+            <li>
+              <span class="num">1</span>
+              <p><strong>Selecione as Equipes</strong>Escolha os dois times que irão se enfrentar.</p>
+            </li>
+            <li>
+              <span class="num">2</span>
+              <p><strong>Defina Data e Horário</strong>Configure quando o jogo acontecerá.</p>
+            </li>
+            <li>
+              <span class="num">3</span>
+              <p><strong>Escolha a Modalidade</strong>Futebol, vôlei, basquete, handbol, etc.</p>
+            </li>
+            <li>
+              <span class="num">4</span>
+              <p><strong>Publique a Partida</strong>Torne visível para todos os usuários.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card blue">
+          <div class="card-header">
+            <i class="bi bi-bullseye"></i>
+            <h3>Sistema de Placar</h3>
+          </div>
+          <ul class="steps">
+            <li>
+              <span class="num">1</span>
+              <p><strong>Atualização em Tempo Real</strong>Pontuação atualizada instantaneamente.</p>
+            </li>
+            <li>
+              <span class="num">2</span>
+              <p><strong>Controle de Sets/Tempos</strong>Gerenciamento automático por modalidade.</p>
+            </li>
+            <li>
+              <span class="num">3</span>
+              <p><strong>Histórico de Jogadas</strong>Registro completo de todos os pontos.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card green">
+          <div class="card-header">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <h3>Placar Ao Vivo</h3>
+          </div>
+          <div class="highlight">
+            <p><strong>Selecione as Equipes</strong></p>
+            <ul>
+              <li>Pontuação atual de cada equipe;</li>
+              <li>Tempo de jogo decorrido;</li>
+              <li>Set/período atual;</li>
+              <li>Status do jogo (ativo/pausado).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+    <div class="footer-section">
+      <img src="./IMG/logo-senai.png" alt="Logo SENAI">
+      <p>© 2025 SENAI - Todos os direitos reservados</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Redes Sociais</h3>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Membros</h3>
+      <ul>
+        <li>Anna Luisa Bonvicine</li>
+        <li>Augusto Ferrari</li>
+        <li>Guilherme Henrique Bom da Mata</li>
+        <li>Maria Clara Garatini</li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>

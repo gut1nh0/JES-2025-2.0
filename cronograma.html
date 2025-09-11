@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./CSS/cronograma.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Document</title>
+    <title>JES-2025 | Cronograma</title>
 </head>
 
 <body>
@@ -32,45 +32,35 @@
         </div>
         <div class="container-jogos">
             <button id="criar-jogo"><i class="bi bi-plus-lg"></i></button>
-
-            <div class="card-cronograma">
-                <div class="data-cronograma">
-                    <p>HOJE</p>
-                    <p><i class="bi bi-clock"></i> 15:00</p>
-                </div>
-                <div class="categoria-esporte">
-                    <h1>Volei - Feminino</h1>
-                </div>
-                <div class="jogo-cronograma">
-                    <div class="time-cronograma">
-                        <img src="./IMG/" alt="">
-                        <p>${time1}</p>
-                    </div>
-                    <h1>X</h1>
-                    <div class="time-cronograma">
-                        <img src="./images/emblema.png" alt="">
-                        <p>${time2}</p>
-                    </div>
-                </div>
-                <div class="cronograma-botao">
-                    <button></button>
-                </div>
-            </div>
         </div>
         <div class="overlay" id="overlay">
             <div class="modal">
                 <h2>Cadastro de Jogos</h2>
-                <input type="text" placeholder="Time 1">
-                <input type="text" placeholder="Time 2">
+                <select name="time1" id="time1">
+                    <option value="" selected disabled>Selecione o Time 1</option>
+                    <option value="futebol">Time</option>
+                </select>
+                <select name="time2" id="time2">
+                    <option value="" selected disabled>Selecione o Time 2</option>
+                    <option value="futebol">Futebol</option>
+                </select>
                 <div class="input-group">
                     <input type="date">
                     <input type="time" placeholder="Horário">
                 </div>
                 <div class="input-group">
-                    <input type="text" placeholder="Esporte">
-                    <input type="text" placeholder="Gênero">
+                    <select name="genero" id="genero">
+                        <option value="" selected disabled>Selecione o gênero</option>
+                        <option value="futebol">Masculino</option>
+                        <option value="basquete">Feminino</option>
+                    </select>
+                    <select name="esporte" id="esporte">
+                        <option value="" selected disabled>Selecione o esporte</option>
+                        <option value="futebol">Futebol</option>
+                        <option value="handball">Handball</option>
+                    </select>
                 </div>
-                <button>CRIAR</button>
+                <button id="btn-criar">CRIAR</button>
             </div>
         </div>
     </main>
@@ -126,24 +116,30 @@
         card.classList.add('card-cronograma');
 
         card.innerHTML = `
-        <div class="data-cronograma">
-            <h1>${data} - ${horario}</h1>
-            <p>${esporte} - ${genero}</p>
-        </div>
-        <div class="jogo-cronograma">
-            <div class="time-cronograma">
-                <img src="./images/emblema.png" alt="">
-                <p>${time1}</p>
-            </div>
-            <h1>X</h1>
-            <div class="time-cronograma">
-                <img src="./images/emblema.png" alt="">
-                <p>${time2}</p>
-            </div>
-        </div>
-        <div class="cronograma-botao">
-            <button></button>
-        </div>
+                <div class="top-cronograma">
+                    <div class="data-cronograma">
+                        <p>${data}</p>
+                        <p><i class="bi bi-clock"></i>${horario}</p>
+                    </div>
+                    <div class="categoria-esporte">
+                        <h1>${esporte} - ${genero}</h1>
+                    </div>
+                </div>
+                <div class="jogo-cronograma">
+                    <div class="time-cronograma">
+                        <p>${time1}</p>
+                        <img src="./IMG/placar/emblema.png" alt="">
+                    </div>
+                    <h1>X</h1>
+                    <div class="time-cronograma">
+                        <p>${time2}</p>
+                        <img src="./IMG/placar/emblema.png" alt="">
+                    </div>
+                </div>
+                <div class="cronograma-botao">
+                    <button>Iniciar</button>
+                </div>
+
     `;
 
         // Adiciona o novo card ao container
@@ -151,29 +147,25 @@
     }
 
     // Captura o clique no botão "CRIAR" do modal
-    const criarBtn = document.querySelector('.modal button');
+    const criarBtn = document.querySelector('#btn-criar');
     criarBtn.addEventListener('click', () => {
-        // Pega os valores dos inputs
-        const time1 = document.querySelector('.modal input[placeholder="Time 1"]').value;
-        const time2 = document.querySelector('.modal input[placeholder="Time 2"]').value;
+        const time1 = document.querySelector('#time1').value;
+        const time2 = document.querySelector('#time2').value;
         const data = document.querySelector('.modal input[type="date"]').value;
-        const horario = document.querySelector('.modal input[type="time"').value;
-        const esporte = document.querySelector('.modal input[placeholder="Esporte"]').value;
-        const genero = document.querySelector('.modal input[placeholder="Gênero"]').value
+        const horario = document.querySelector('.modal input[type="time"]').value;
+        const esporte = document.querySelector('#esporte').value;
+        const genero = document.querySelector('#genero').value;
 
-        // Verifica se os campos estão preenchidos
         if (time1 && time2 && data && horario && esporte && genero) {
             criarCard(time1, time2, data, horario, esporte, genero);
-            fecharModal(); // Fecha o modal após criar o card
+            fecharModal();
+
+            // Limpa os campos após criar
+            document.querySelectorAll('.modal input, .modal select').forEach(el => el.value = "");
         } else {
             alert('Por favor, preencha todos os campos!');
         }
     });
-
-    function fecharModal() {
-        const overlay = document.getElementById('overlay');
-        overlay.classList.remove('ativo');
-    }
 </script>
 
 </html>
